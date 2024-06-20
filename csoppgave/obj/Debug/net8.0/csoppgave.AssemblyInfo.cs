@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("csoppgave")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1aa5c22db40c8287bc87cfd7528627707b3d920e")]
 [assembly: System.Reflection.AssemblyProductAttribute("csoppgave")]
 [assembly: System.Reflection.AssemblyTitleAttribute("csoppgave")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

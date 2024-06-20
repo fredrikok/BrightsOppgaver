@@ -1,0 +1,41 @@
+A.
+
+SELECT firstname, lastname FROM actor
+ORDER BY lastname ASC;
+
+B.
+
+SELECT COUNT(movie) FROM movie;
+
+C.
+
+INSERT INTO movie (id, title, releaseyear, runtime)
+VALUES ('930', 'Pulp Fiction', '1994', '234');
+
+D.
+
+SELECT title, releaseyear FROM movie 
+	WHERE releaseyear <= 1999
+		
+
+E.
+
+CREATE VIEW twentiethcenturymovies_view AS
+SELECT title, releaseyear FROM movie 
+	WHERE releaseyear <= 1999
+		
+F.
+
+UPDATE movie
+SET releaseyear = '1978'
+WHERE id = 904;
+
+G.
+
+SELECT * FROM twentiethcenturymovies_view
+
+H.
+
+
+
+I.
