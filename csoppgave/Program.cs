@@ -6,14 +6,17 @@
 
         Console.WriteLine("Choose apartment type? (A|B|C)"); //har ikke noe spesiell funksjon
 
+        string apartmentType = Console.ReadLine().ToUpper();
 
-        string apartmentType = Console.ReadLine();
+        while (apartmentType != "A" && apartmentType != "B" && apartmentType != "C")
+        {
+            Console.WriteLine("Please choose either A B or C");
+            apartmentType = Console.ReadLine().ToUpper();
+        }
 
         Apartment apartment = new Apartment(apartmentType);
 
         Start(apartment);
-
-
 
         // apartment type og hele objektet printes
         Console.WriteLine(""); // space
@@ -42,7 +45,7 @@
         string htmlFilePath = Path.Combine(htmlDirectory, $"{apartment.ApartmentType}.html");
         string htmlContent = GenerateHtmlContent(apartment);
         File.WriteAllText(htmlFilePath, htmlContent);
-        Console.WriteLine($"Apartment details have been written to {htmlFilePath}");
+        Console.WriteLine($"File: {htmlFilePath}");
     }
 
 
@@ -103,7 +106,7 @@
 
         apartment.AddRoom(room);
 
-        Console.WriteLine("Would you like to add another room? (y/n)"); //restarter funksjon og spør samme spørsmål. 
+        Console.WriteLine("Add another room? (y/n)"); //restarter funksjon og spør samme spørsmål. 
         if (Console.ReadLine().ToLower() == "y")
         {
             Start(apartment);
@@ -125,9 +128,8 @@ public class Apartment
     public void AddRoom(Room room)
     {
         Rooms.Add(room);
-        TotalSize += room.roomWidth + room.roomLength; //ikke riktig
+        TotalSize += room.roomWidth + room.roomLength; // TODO: ikke riktig output
     }
-
 }
 
 public class Room
@@ -151,8 +153,7 @@ public class Room
 
 public class SpecialRoom : Room //arv klasse
 {
-    public SpecialRoom(string roomName, int roomLength, int roomWidth)
-        : base(roomName, roomLength, roomWidth)
+    public SpecialRoom(string roomName, int roomLength, int roomWidth) : base(roomName, roomLength, roomWidth)
     {
     }
 
