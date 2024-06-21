@@ -27,3 +27,4 @@ C:\Users\fredr\OneDrive\Desktop\BrightsOppgaver\BrightsOppgaver\csoppgave\obj\De
 C:\Users\fredr\OneDrive\Desktop\BrightsOppgaver\BrightsOppgaver\csoppgave\obj\Debug\net8.0\csoppgave.pdb
 C:\Users\fredr\OneDrive\Desktop\BrightsOppgaver\BrightsOppgaver\csoppgave\obj\Debug\net8.0\csoppgave.genruntimeconfig.cache
 C:\Users\fredr\OneDrive\Desktop\BrightsOppgaver\BrightsOppgaver\csoppgave\obj\Debug\net8.0\ref\csoppgave.dll
+C:\Users\fredr\Desktop\BrightsOppgaver\csoppgave\obj\Debug\net8.0\csoppgave.sourcelink.json

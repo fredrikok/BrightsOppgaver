@@ -8,7 +8,7 @@
 
         string apartmentType = Console.ReadLine().ToUpper();
 
-        while (apartmentType != "A" && apartmentType != "B" && apartmentType != "C")
+        while (apartmentType != "A" && apartmentType != "B" && apartmentType != "C") //Hvis bruker skulle skrevet feil
         {
             Console.WriteLine("Please choose either A B or C");
             apartmentType = Console.ReadLine().ToUpper();
@@ -18,7 +18,8 @@
 
         Start(apartment);
 
-        // apartment type og hele objektet printes
+        // apartment type og hele objektet skrives ut 
+
         Console.WriteLine(""); // space
         Console.WriteLine($"Apartment type: {apartment.ApartmentType}");
         Console.WriteLine($"Rooms for apartment type {apartment.ApartmentType}: ");
