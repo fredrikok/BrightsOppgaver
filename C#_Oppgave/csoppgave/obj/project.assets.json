@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fredr\\Desktop\\BrightsOppgaver\\csoppgave\\csoppgave.csproj",
+      "projectUniqueName": "C:\\Users\\fredr\\Desktop\\BrightsOppgaver\\C#_Oppgave\\csoppgave\\csoppgave.csproj",
       "projectName": "csoppgave",
-      "projectPath": "C:\\Users\\fredr\\Desktop\\BrightsOppgaver\\csoppgave\\csoppgave.csproj",
+      "projectPath": "C:\\Users\\fredr\\Desktop\\BrightsOppgaver\\C#_Oppgave\\csoppgave\\csoppgave.csproj",
       "packagesPath": "C:\\Users\\fredr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fredr\\Desktop\\BrightsOppgaver\\csoppgave\\obj\\",
+      "outputPath": "C:\\Users\\fredr\\Desktop\\BrightsOppgaver\\C#_Oppgave\\csoppgave\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
