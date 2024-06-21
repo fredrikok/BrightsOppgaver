@@ -75,42 +75,62 @@
     }
 
 
-    static void Start(Apartment apartment)
+    static void Start(Apartment apartment) //funksjon som bygger rom til leilighet 
     {
         string roomName;
-        int roomLength;
-        int roomWidth;
+        int roomLength = 0;
+        int roomWidth = 0;
 
-        Console.WriteLine("What is the name of the room?");
-        roomName = Console.ReadLine();
-        Console.WriteLine("What is the length of the room?");
-        roomLength = Int32.Parse(Console.ReadLine());
-        Console.WriteLine("What is the width of the room?");
-        roomWidth = Int32.Parse(Console.ReadLine());
-
-        Room room;
-
-        switch (roomName)
-        //hvis rommet er unikt lag et nytt objekt under en "arv" klasse
-        //bruker switch fordi da kan man fortsette å lage flere spesielle type rom
+        while (true) //loop
         {
-            case "GameRoom":
-                room = new SpecialRoom(roomName, roomLength, roomWidth);
-                break;
-            // case "FunRoom": 
-            // room = new SpecialRoom(roomName, roomLength, roomWidth);
-            // break;
-            default: //default lager rom som vanlig
-                room = new Room(roomName, roomLength, roomWidth);
-                break;
-        }
+            try
+            {
+                Console.WriteLine("What is the name of the room?");
+                roomName = Console.ReadLine();
 
-        apartment.AddRoom(room);
+                Console.WriteLine("What is the length of the room?");
+                roomLength = Int32.Parse(Console.ReadLine());
 
-        Console.WriteLine("Add another room? (y/n)"); //restarter funksjon og spør samme spørsmål. 
-        if (Console.ReadLine().ToLower() == "y")
-        {
-            Start(apartment);
+                Console.WriteLine("What is the width of the room?");
+                roomWidth = Int32.Parse(Console.ReadLine());
+
+                Room room;
+
+                switch (roomName)
+                {
+                    case "GameRoom":
+                        room = new SpecialRoom(roomName, roomLength, roomWidth);
+                        break;
+                    // case "FunRoom": 
+                    // room = new SpecialRoom(roomName, roomLength, roomWidth);
+                    // break;
+                    default: //default lager rom som vanlig
+                        room = new Room(roomName, roomLength, roomWidth);
+                        break;
+                }
+
+                apartment.AddRoom(room);
+
+                Console.WriteLine("Add another room? (y/n)");
+                if (Console.ReadLine().ToLower() == "y")
+                {
+                    Start(apartment);
+                }
+                break; //looper gjennom hvis det skulle skje en feil.
+            }
+            catch (FormatException ex)
+            {
+                Console.WriteLine("Wrong formar");
+                Console.WriteLine("Error: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+                //fortsetter som vanlig
+            }
         }
     }
 }
