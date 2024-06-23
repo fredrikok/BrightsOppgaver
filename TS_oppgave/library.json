@@ -1,0 +1,32 @@
+{
+  "libraryType": "General",
+  "books": [
+    {
+      "title": "Lovers Book",
+      "author": "Shala Magahi",
+      "pages": 320,
+      "genre": "romance"
+    },
+    {
+      "title": "Star Wars",
+      "author": "Mark Hammil",
+      "pages": 520,
+      "genre": "fiction"
+    },
+    {
+      "title": "The Rarest Book",
+      "author": "John Rare Man",
+      "pages": 95,
+      "genre": "rare"
+    }
+  ],
+  "summary": {
+    "totalBooks": 3,
+    "totalPages": 935,
+    "genreCount": {
+      "Fiction": 1,
+      "Rare": 1,
+      "Other": 1
+    }
+  }
+}
